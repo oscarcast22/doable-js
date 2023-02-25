@@ -8,8 +8,3 @@ export async function createUser(
   sessionStorage.setItem(tokenKey, token);
   return user;
 }
-
-export async function getUser() {
-  const { token, ...user } = await apiFetch("profile");
-  return user;
-}
